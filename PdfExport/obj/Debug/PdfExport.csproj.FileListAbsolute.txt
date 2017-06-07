@@ -1,0 +1,15 @@
+c:\users\fatima\documents\visual studio 2017\Projects\PdfExport\PdfExport\bin\Debug\PdfExport.exe.config
+c:\users\fatima\documents\visual studio 2017\Projects\PdfExport\PdfExport\bin\Debug\PdfExport.exe
+c:\users\fatima\documents\visual studio 2017\Projects\PdfExport\PdfExport\bin\Debug\PdfExport.pdb
+c:\users\fatima\documents\visual studio 2017\Projects\PdfExport\PdfExport\bin\Debug\itextsharp.dll
+c:\users\fatima\documents\visual studio 2017\Projects\PdfExport\PdfExport\obj\Debug\PdfExport.csprojResolveAssemblyReference.cache
+c:\users\fatima\documents\visual studio 2017\Projects\PdfExport\PdfExport\obj\Debug\MainWindow.g.cs
+c:\users\fatima\documents\visual studio 2017\Projects\PdfExport\PdfExport\obj\Debug\App.g.cs
+c:\users\fatima\documents\visual studio 2017\Projects\PdfExport\PdfExport\obj\Debug\PdfExport_MarkupCompile.cache
+c:\users\fatima\documents\visual studio 2017\Projects\PdfExport\PdfExport\obj\Debug\PdfExport_MarkupCompile.lref
+c:\users\fatima\documents\visual studio 2017\Projects\PdfExport\PdfExport\obj\Debug\MainWindow.baml
+c:\users\fatima\documents\visual studio 2017\Projects\PdfExport\PdfExport\obj\Debug\PdfExport.g.resources
+c:\users\fatima\documents\visual studio 2017\Projects\PdfExport\PdfExport\obj\Debug\PdfExport.Properties.Resources.resources
+c:\users\fatima\documents\visual studio 2017\Projects\PdfExport\PdfExport\obj\Debug\PdfExport.csproj.GenerateResource.Cache
+c:\users\fatima\documents\visual studio 2017\Projects\PdfExport\PdfExport\obj\Debug\PdfExport.exe
+c:\users\fatima\documents\visual studio 2017\Projects\PdfExport\PdfExport\obj\Debug\PdfExport.pdb
