@@ -1,0 +1,14 @@
+C:\Users\Fatima\Desktop\ItextSharp\CREATEPDFWPFCONTROL\CreatePDFWPFControl\PdfWithComponent\bin\Debug\PdfWithComponent.exe.config
+C:\Users\Fatima\Desktop\ItextSharp\CREATEPDFWPFCONTROL\CreatePDFWPFControl\PdfWithComponent\bin\Debug\PdfWithComponent.exe
+C:\Users\Fatima\Desktop\ItextSharp\CREATEPDFWPFCONTROL\CreatePDFWPFControl\PdfWithComponent\bin\Debug\PdfWithComponent.pdb
+C:\Users\Fatima\Desktop\ItextSharp\CREATEPDFWPFCONTROL\CreatePDFWPFControl\PdfWithComponent\bin\Debug\itextsharp.dll
+C:\Users\Fatima\Desktop\ItextSharp\CREATEPDFWPFCONTROL\CreatePDFWPFControl\PdfWithComponent\obj\Debug\MainWindow.g.cs
+C:\Users\Fatima\Desktop\ItextSharp\CREATEPDFWPFCONTROL\CreatePDFWPFControl\PdfWithComponent\obj\Debug\App.g.cs
+C:\Users\Fatima\Desktop\ItextSharp\CREATEPDFWPFCONTROL\CreatePDFWPFControl\PdfWithComponent\obj\Debug\PdfWithComponent_MarkupCompile.cache
+C:\Users\Fatima\Desktop\ItextSharp\CREATEPDFWPFCONTROL\CreatePDFWPFControl\PdfWithComponent\obj\Debug\PdfWithComponent_MarkupCompile.lref
+C:\Users\Fatima\Desktop\ItextSharp\CREATEPDFWPFCONTROL\CreatePDFWPFControl\PdfWithComponent\obj\Debug\MainWindow.baml
+C:\Users\Fatima\Desktop\ItextSharp\CREATEPDFWPFCONTROL\CreatePDFWPFControl\PdfWithComponent\obj\Debug\PdfWithComponent.g.resources
+C:\Users\Fatima\Desktop\ItextSharp\CREATEPDFWPFCONTROL\CreatePDFWPFControl\PdfWithComponent\obj\Debug\PdfWithComponent.Properties.Resources.resources
+C:\Users\Fatima\Desktop\ItextSharp\CREATEPDFWPFCONTROL\CreatePDFWPFControl\PdfWithComponent\obj\Debug\PdfWithComponent.csproj.GenerateResource.Cache
+C:\Users\Fatima\Desktop\ItextSharp\CREATEPDFWPFCONTROL\CreatePDFWPFControl\PdfWithComponent\obj\Debug\PdfWithComponent.exe
+C:\Users\Fatima\Desktop\ItextSharp\CREATEPDFWPFCONTROL\CreatePDFWPFControl\PdfWithComponent\obj\Debug\PdfWithComponent.pdb
