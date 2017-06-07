@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PdfWithComponent"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
+    <Grid Name="GridContent">
         
         <Grid  Height="350" Width="525" Background="Gray">
             <Grid Name="GridForm" Margin="28,0,32,47" Background="White" Height="264" VerticalAlignment="Bottom">
@@ -33,7 +33,7 @@
                 <TextBox Height="23" HorizontalAlignment="Left" Margin="158,0,0,34" Name="textBoxAddress" VerticalAlignment="Bottom" Width="222" />
                 <Button Content="Generate pdf" HorizontalAlignment="center"  VerticalAlignment="Center"  Click="Button_Click" Name="btnGeneratePDFFile" Margin="150,238,110,6" Width="128"/>
                 <Button Content="Open pdf" HorizontalAlignment="Left"  VerticalAlignment="Center"   Name="btnOpenPDFFile" Click="btnOpenPDFFile_Click" Margin="27,240,0,4" Width="101"/>
-                <Button Content="Cancel" Height="23" HorizontalAlignment="Right" Margin="0,235,22,0" Name="button3" VerticalAlignment="Top" Width="70" />
+                <Button Content="Cancel" Height="23" HorizontalAlignment="Right" Margin="0,235,22,0" Name="button3" VerticalAlignment="Top" Width="70" Click="button3_Click" />
 
                 <TextBlock Height="23" HorizontalAlignment="Left" Margin="6,6,0,0" Name="textBlockHeading" Text="Registration Form" VerticalAlignment="Top" Width="153" FontSize="17" FontStretch="ExtraCondensed" />
             </Grid>
