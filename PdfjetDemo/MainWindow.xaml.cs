@@ -17,12 +17,14 @@ namespace PdfjetDemo
         public MainWindow()
         {
             InitializeComponent();
+
+            Open_Pdf_Button.IsEnabled = false;
         }
 
         public void DrawComponent()
         {
             //initilize the pdf file
-            FileStream fos = new FileStream("Example_05.pdf", FileMode.Create);
+            FileStream fos = new FileStream("PdfJet.pdf", FileMode.Create);
 
             BufferedStream bos = new BufferedStream(fos);
 
@@ -75,25 +77,55 @@ namespace PdfjetDemo
 
             //Draw the Form
 
+            // Set the Colomn for the labels
+
             TextColumn Labels_Colomn = new TextColumn(0);
 
             Labels_Colomn.SetSpaceBetweenLines(5.0f);
 
             Labels_Colomn.SetSpaceBetweenParagraphs(10.0f);
 
-            Labels_Colomn.SetPosition(10.0f, 50.0f);
+            Labels_Colomn.SetPosition(10.0f, 80.0f);
 
-            //Labels_Colomn.SetAlignment(Align.LEFT);
+            Labels_Colomn.SetSize(150.0f, 20.0f);
 
-            column.SetSize(150.0f, 20.0f);
+            Labels_Colomn.SetSpaceBetweenParagraphs(20);
 
-            Paragraph p2 = new Paragraph();
+            //Set The Text for the labels
 
-            p2.SetAlignment(Align.CENTER);
+            Paragraph First_Name = new Paragraph();
 
-            p2.Add(new TextLine(Labels_Font, "First Name:"));
+            First_Name.Add(new TextLine(Labels_Font, "First Name:"));
 
-            Labels_Colomn.AddParagraph(p2);
+            Paragraph Last_Name = new Paragraph();
+
+            Last_Name.Add(new TextLine(Labels_Font, "Last Name:"));
+
+            // Create the textboxes for the labels
+
+            TextBox First_Name_Textbox = new TextBox(Labels_Font);
+
+            First_Name_Textbox.SetText("Mohammad");
+
+            First_Name_Textbox.SetPosition(80.0f,80.0f);
+           
+            TextBox Last_Name_Textbox = new TextBox(Labels_Font);
+
+            Last_Name_Textbox.SetText("Altahan");
+
+            Last_Name_Textbox.SetPosition(80.0f, 110.0f);
+
+            //add the labels to the colomn
+
+            Labels_Colomn.AddParagraph(First_Name);
+
+            Labels_Colomn.AddParagraph(Last_Name);
+
+            //add the the components to the page
+
+            First_Name_Textbox.DrawOn(page2);
+
+            Last_Name_Textbox.DrawOn(page2);
 
             Labels_Colomn.DrawOn(page2);
 
@@ -116,11 +148,13 @@ namespace PdfjetDemo
             Create_Pdf_Button.IsEnabled = false;
 
             Pdf_File_Ready.Content = "The pdf file is ready click open button to open it";
+
+            Open_Pdf_Button.IsEnabled = true;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Process.Start("Example_05.pdf");
+            Process.Start("PdfJet.pdf");
         }
     }
 }
