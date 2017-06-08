@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using PDFjet.NET;
 using System.Windows;
+using System.Diagnostics;
 
 namespace PdfjetDemo
 {
@@ -16,90 +17,110 @@ namespace PdfjetDemo
         public MainWindow()
         {
             InitializeComponent();
-
-            
         }
 
-        public class Example_02
+        public void DrawComponent()
         {
-           
-                public Example_02()
-                {
-                    
-                    FileStream fos = new FileStream(@"c:\\temp\\Example_02.pdf", FileMode.Create);
-                    BufferedStream bos = new BufferedStream(fos);
+            //initilize the pdf file
+            FileStream fos = new FileStream("Example_05.pdf", FileMode.Create);
 
-                    PDF pdf = new PDF(bos);
-                    Page page = new Page(pdf, Letter.PORTRAIT);
+            BufferedStream bos = new BufferedStream(fos);
 
-                    Box flag = new Box(85, 85, 64, 32);
+            PDF pdf = new PDF(bos);
 
-                    PDFjet.NET.Path path = new PDFjet.NET.Path();
-                    path.Add(new PDFjet.NET.Point(13.0, 0.0));
-                    path.Add(new PDFjet.NET.Point(15.5, 4.5));
+            Page page2 = new Page(pdf, A4.PORTRAIT);
 
-                    path.Add(new PDFjet.NET.Point(18.0, 3.5));
-                    path.Add(new PDFjet.NET.Point(15.5, 13.5, PDFjet.NET.Point.CONTROL_POINT));
-                    path.Add(new PDFjet.NET.Point(15.5, 13.5, PDFjet.NET.Point.CONTROL_POINT));
-                    path.Add(new PDFjet.NET.Point(20.5, 7.5));
+            Font Title_Font = new Font(pdf, CoreFont.HELVETICA_BOLD);
 
-                    path.Add(new PDFjet.NET.Point(21.0, 9.5));
-                    path.Add(new PDFjet.NET.Point(25.0, 9.0));
-                    path.Add(new PDFjet.NET.Point(24.0, 13.0));
-                    path.Add(new PDFjet.NET.Point(25.5, 14.0));
-                    path.Add(new PDFjet.NET.Point(19.0, 19.0));
-                    path.Add(new PDFjet.NET.Point(20.0, 21.5));
-                    path.Add(new PDFjet.NET.Point(13.5, 20.5));
-                    path.Add(new PDFjet.NET.Point(13.5, 27.0));
-                    path.Add(new PDFjet.NET.Point(12.5, 27.0));
-                    path.Add(new PDFjet.NET.Point(12.5, 20.5));
-                    path.Add(new PDFjet.NET.Point(6.0, 21.5));
-                    path.Add(new PDFjet.NET.Point(7.0, 19.0));
-                    path.Add(new PDFjet.NET.Point(0.5, 14.0));
-                    path.Add(new PDFjet.NET.Point(2.0, 13.0));
-                    path.Add(new PDFjet.NET.Point(1.0, 9.0));
-                    path.Add(new PDFjet.NET.Point(5.0, 9.5));
+            Title_Font.SetSize(14f);
 
-                    path.Add(new PDFjet.NET.Point(5.5, 7.5));
-                    path.Add(new PDFjet.NET.Point(10.5, 13.5, PDFjet.NET.Point.CONTROL_POINT));
-                    path.Add(new PDFjet.NET.Point(10.5, 13.5, PDFjet.NET.Point.CONTROL_POINT));
-                    path.Add(new PDFjet.NET.Point(8.0, 3.5));
+            Font Labels_Font = new Font(pdf, CoreFont.HELVETICA_BOLD);
 
-                    path.Add(new PDFjet.NET.Point(10.5, 4.5));
-                    path.SetClosePath(true);
-                    path.SetColor(Color.red);
-                    path.SetFillShape(true);
-                    path.PlaceIn(flag, 19.0, 3.0);
-                    path.DrawOn(page);
+            Labels_Font.SetSize(10f);
 
-                    Box box = new Box();
-                    box.SetSize(16, 32);
-                    box.SetColor(Color.red);
-                    box.SetFillShape(true);
-                    box.PlaceIn(flag, 0.0, 0.0);
-                    box.DrawOn(page);
-                    box.PlaceIn(flag, 48.0, 0.0);
-                    box.DrawOn(page);
+            // Draw the Logo
+            String fileName = @"C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\images\pink_elephant.png";
 
-                    path.ScaleBy(15.0);
-                    path.SetFillShape(false);
-                    path.DrawOn(page);
+            FileStream fis1 = new FileStream(fileName, FileMode.Open, FileAccess.Read);
 
-                    pdf.Flush();
-                    bos.Close();
-                }
+            Image image2 = new Image(pdf, fis1, ImageType.PNG);
+
+            image2.SetPosition(20.0f, 20.0f);
+
+            image2.ScaleBy(0.1f);
+
+            image2.DrawOn(page2);
+
+            //Draw the title
+
+            TextColumn column = new TextColumn(0);
+
+            column.SetSpaceBetweenLines(5.0f);
+
+            column.SetSpaceBetweenParagraphs(10.0f);
+
+            column.SetSize(300.0f, 20.0f);
+
+            column.SetPosition(150.0f, 30.0f);
+
+            Paragraph p1 = new Paragraph();
+
+            p1.SetAlignment(Align.CENTER);
+
+            p1.Add(new TextLine(Title_Font, "The First Demo Using PDFJET Library"));
+
+            column.AddParagraph(p1);
+
+            column.DrawOn(page2);
+
+            //Draw the Form
+
+            TextColumn Labels_Colomn = new TextColumn(0);
+
+            Labels_Colomn.SetSpaceBetweenLines(5.0f);
+
+            Labels_Colomn.SetSpaceBetweenParagraphs(10.0f);
+
+            Labels_Colomn.SetPosition(10.0f, 50.0f);
+
+            //Labels_Colomn.SetAlignment(Align.LEFT);
+
+            column.SetSize(150.0f, 20.0f);
+
+            Paragraph p2 = new Paragraph();
+
+            p2.SetAlignment(Align.CENTER);
+
+            p2.Add(new TextLine(Labels_Font, "First Name:"));
+
+            Labels_Colomn.AddParagraph(p2);
+
+            Labels_Colomn.DrawOn(page2);
+
+            //Write to the pdf file
+            pdf.Flush();
+            bos.Close();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                new Example_02();
+                DrawComponent();
             }
             catch (Exception exp)
             {
                 Console.WriteLine(exp.StackTrace);
             }
+
+            Create_Pdf_Button.IsEnabled = false;
+
+            Pdf_File_Ready.Content = "The pdf file is ready click open button to open it";
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Process.Start("Example_05.pdf");
         }
     }
 }

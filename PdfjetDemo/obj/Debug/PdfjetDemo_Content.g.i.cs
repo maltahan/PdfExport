@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/europelargesm.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/pink_elephant.png")]
 
 
