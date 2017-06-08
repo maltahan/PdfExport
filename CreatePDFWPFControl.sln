@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatePDFWPFControl", "Crea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfWithComponent", "PdfWithComponent\PdfWithComponent.csproj", "{1125444A-4CFE-4DFA-8666-B76F676BE180}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfjetDemo", "PdfjetDemo\PdfjetDemo.csproj", "{1625F01D-75A9-41EC-917E-6099ABBFE23C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,14 @@ Global
 		{1125444A-4CFE-4DFA-8666-B76F676BE180}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1125444A-4CFE-4DFA-8666-B76F676BE180}.Release|x86.ActiveCfg = Release|Any CPU
 		{1125444A-4CFE-4DFA-8666-B76F676BE180}.Release|x86.Build.0 = Release|Any CPU
+		{1625F01D-75A9-41EC-917E-6099ABBFE23C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1625F01D-75A9-41EC-917E-6099ABBFE23C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1625F01D-75A9-41EC-917E-6099ABBFE23C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1625F01D-75A9-41EC-917E-6099ABBFE23C}.Debug|x86.Build.0 = Debug|Any CPU
+		{1625F01D-75A9-41EC-917E-6099ABBFE23C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1625F01D-75A9-41EC-917E-6099ABBFE23C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1625F01D-75A9-41EC-917E-6099ABBFE23C}.Release|x86.ActiveCfg = Release|Any CPU
+		{1625F01D-75A9-41EC-917E-6099ABBFE23C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
