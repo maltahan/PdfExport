@@ -25,3 +25,4 @@ C:\Users\Fatima\Documents\PdfExport\PdfWithComponent\obj\Debug\PdfWithComponent.
 C:\Users\Fatima\Documents\PdfExport\PdfWithComponent\obj\Debug\PdfWithComponent.csproj.GenerateResource.Cache
 C:\Users\Fatima\Documents\PdfExport\PdfWithComponent\obj\Debug\PdfWithComponent.exe
 C:\Users\Fatima\Documents\PdfExport\PdfWithComponent\obj\Debug\PdfWithComponent.pdb
+C:\Users\Fatima\Documents\PdfExport\PdfWithComponent\obj\Debug\PdfWithComponent.csprojResolveAssemblyReference.cache
