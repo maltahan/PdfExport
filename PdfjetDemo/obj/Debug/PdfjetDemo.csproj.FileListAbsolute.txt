@@ -12,3 +12,4 @@ C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\obj\Debug\PdfjetDemo.csproj.Gener
 C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\obj\Debug\PdfjetDemo.exe
 C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\obj\Debug\PdfjetDemo.pdb
 C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\bin\Debug\PDFjet-For.NET_4_5.dll
+C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\obj\Debug\PdfjetDemo.csprojResolveAssemblyReference.cache
