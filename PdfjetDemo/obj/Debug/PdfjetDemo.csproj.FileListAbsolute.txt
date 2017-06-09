@@ -1,7 +1,7 @@
 C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\bin\Debug\PdfjetDemo.exe.config
 C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\bin\Debug\PdfjetDemo.exe
 C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\bin\Debug\PdfjetDemo.pdb
-C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\bin\Debug\PDFjet.dll
+C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\obj\Debug\PdfjetDemo.csprojResolveAssemblyReference.cache
 C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\obj\Debug\MainWindow.g.cs
 C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\obj\Debug\App.g.cs
 C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\obj\Debug\PdfjetDemo_MarkupCompile.cache
@@ -12,3 +12,4 @@ C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\obj\Debug\PdfjetDemo.Properties.R
 C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\obj\Debug\PdfjetDemo.csproj.GenerateResource.Cache
 C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\obj\Debug\PdfjetDemo.exe
 C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\obj\Debug\PdfjetDemo.pdb
+C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\bin\Debug\PDFjet-For.NET_4_5.dll
