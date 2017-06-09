@@ -201,9 +201,106 @@ namespace PdfjetDemo
             joggen_checkbox.DrawOn(page2);
             #endregion
 
+            #region  Add a table to the file
+
+            TextLine Table_text = new TextLine(Title_Font, "Some data about world communications");
+
+            Table_text.SetPosition(20.0f, 220.0f);
+
+            Table table = new Table();
+
+            Font Header_Font = new Font(pdf, CoreFont.HELVETICA_BOLD);
+
+            Header_Font.SetSize(7.0f);
+
+            Font Cell_Font = new Font(pdf, CoreFont.HELVETICA);
+
+            Cell_Font.SetSize(7.0f);
+
+            List<List<Cell>> tableData = GetData("WorldData.txt", "|", Table.DATA_HAS_2_HEADER_ROWS, Header_Font, Cell_Font);
+
+            table.SetData(tableData, Table.DATA_HAS_2_HEADER_ROWS);
+
+            table.SetPosition(20.0f, 240.0f);
+
+            table.SetTextColorInRow(6, Color.blue);
+
+            table.SetTextColorInRow(39, Color.red);
+
+            table.RemoveLineBetweenRows(0, 1);
+
+            table.AutoAdjustColumnWidths();
+
+            table.SetColumnWidth(0, 120);
+
+            table.RightAlignNumbers();
+
+            int numOfPages = table.GetNumberOfPages(page2);
+
+            Table_text.DrawOn(page2);
+
+            while (true)
+            {
+                table.DrawOn(page2);
+                // TO DO: Draw "Page 1 of N" here
+                if (!table.HasMoreData())
+                {
+                    // Allow the table to be drawn again later:
+                    table.ResetRenderedPagesCount();
+                    break;
+                }
+                page2 = new Page(pdf, Letter.PORTRAIT);
+            }
+
+            #endregion
+
             //Write to the pdf file
             pdf.Flush();
             bos.Close();
+        }
+
+        public List<List<Cell>> GetData(String fileName, String delimiter, int numOfHeaderRows, Font f1, Font f2)
+        {
+
+            List<List<Cell>> tableData = new List<List<Cell>>();
+
+            int currentRow = 0;
+            StreamReader reader = new StreamReader(fileName);
+            String line = null;
+            while ((line = reader.ReadLine()) != null)
+            {
+                List<Cell> row = new List<Cell>();
+                String[] cols = null;
+                if (delimiter.Equals("|"))
+                {
+                    cols = line.Split(new Char[] { '|' });
+                }
+                else if (delimiter.Equals("\t"))
+                {
+                    cols = line.Split(new Char[] { '\t' });
+                }
+                else
+                {
+                    throw new Exception("Only pipes and tabs can be used as delimiters");
+                }
+                for (int i = 0; i < cols.Length; i++)
+                {
+                    String text = cols[i].Trim();
+                    if (currentRow < numOfHeaderRows)
+                    {
+                        row.Add(new Cell(f1, text));
+                    }
+                    else
+                    {
+                        row.Add(new Cell(f2, text));
+                    }
+                }
+                tableData.Add(row);
+                currentRow++;
+            }
+            reader.Close();
+
+            return tableData;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
