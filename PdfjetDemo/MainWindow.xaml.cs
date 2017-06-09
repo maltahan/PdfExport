@@ -164,16 +164,43 @@ namespace PdfjetDemo
 
             #region add images to the file
 
-            String Fruit = @"C:\Users\Fatima\Documents\images\montana_1990.jpg";
+            String montana = @"C:\Users\Fatima\Documents\images\montana_1990.jpg";
 
-            Image image1 = new Image(pdf, new FileStream(Fruit, FileMode.Open), ImageType.JPG);
+            Image image1 = new Image(pdf, new FileStream(montana, FileMode.Open), ImageType.JPG);
 
             image1.SetLocation(20f, 220f);
 
-            image1.ScaleBy(0.1f);
+            image1.SetAltDescription("montana_1990 image");
+
+            image1.ScaleBy(0.09f);
 
             image1.DrawOn(page2);
 
+            String europelargesm = @"C:\Users\Fatima\Documents\images\europelargesm.jpg";
+
+            Image europ_image = new Image(pdf, new FileStream(europelargesm, FileMode.Open), ImageType.JPG);
+
+            europ_image.SetLocation(230f, 220f);
+
+            europ_image.SetAltDescription("europelargesm image");            
+
+            europ_image.ScaleBy(0.26f);
+
+            europ_image.DrawOn(page2);
+
+            String fruits = @"C:\Users\Fatima\Documents\images\Culinary_fruits_front_view.jpg";
+
+            Image fruits_image = new Image(pdf, new FileStream(fruits, FileMode.Open), ImageType.JPG);
+
+            fruits_image.SetLocation(390f, 220f);
+
+            fruits_image.SetAltDescription("fruit image");
+
+            fruits_image.ScaleBy(0.047f);
+
+            fruits_image.DrawOn(page2);
+
+            //Description for the first image
             TextColumn Images_Column = new TextColumn(0);
 
             Images_Column.SetSpaceBetweenLines(5.0f);
@@ -184,17 +211,57 @@ namespace PdfjetDemo
 
             Images_Column.SetSize(400f,20f);
 
-            Paragraph Fruit_image_Decription = new Paragraph();
+            Paragraph Montant_image_Decription = new Paragraph();
 
             Font f4 = new Font(pdf, CoreFont.HELVETICA_OBLIQUE);
 
             f4.SetSize(10f);
 
-            Fruit_image_Decription.Add(new TextLine(f4, "montana_1990"));
+            Montant_image_Decription.Add(new TextLine(f4, "montana 1990"));
 
-            Images_Column.AddParagraph(Fruit_image_Decription);
+            Images_Column.AddParagraph(Montant_image_Decription);
 
             Images_Column.DrawOn(page2);
+
+
+            //Description for the second image
+            TextColumn Europe_colomn = new TextColumn(0);
+
+            Europe_colomn.SetSpaceBetweenLines(5.0f);
+
+            Europe_colomn.SetSpaceBetweenParagraphs(10.0f);
+
+            Europe_colomn.SetPosition(240f, 350f);
+
+            Europe_colomn.SetSize(400f, 20f);
+
+            Paragraph Europ_image_Decription = new Paragraph();
+
+            Europ_image_Decription.Add(new TextLine(f4, "europelargesm"));
+
+            Europe_colomn.AddParagraph(Europ_image_Decription);
+
+            Europe_colomn.DrawOn(page2);
+
+            //Description for the third image
+
+            TextColumn Fruit_colomn = new TextColumn(0);
+
+            Fruit_colomn.SetSpaceBetweenLines(5.0f);
+
+            Fruit_colomn.SetSpaceBetweenParagraphs(10.0f);
+
+            Fruit_colomn.SetPosition(400f, 350f);
+
+            Fruit_colomn.SetSize(400f, 20f);
+
+            Paragraph EFruit_image_Decription = new Paragraph();
+
+            EFruit_image_Decription.Add(new TextLine(f4, "Culinary fruits front view"));
+
+            Fruit_colomn.AddParagraph(EFruit_image_Decription);
+
+            Fruit_colomn.DrawOn(page2);
 
             #endregion
 
