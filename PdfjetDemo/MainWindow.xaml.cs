@@ -23,7 +23,8 @@ namespace PdfjetDemo
 
         public void DrawComponent()
         {
-            //initilize the pdf file
+            #region   initilize the pdf file
+
             FileStream fos = new FileStream("PdfJet.pdf", FileMode.Create);
 
             BufferedStream bos = new BufferedStream(fos);
@@ -40,7 +41,10 @@ namespace PdfjetDemo
 
             Labels_Font.SetSize(10f);
 
-            // Draw the Logo
+            #endregion
+
+            #region Draw the Logo
+
             String fileName = @"C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\images\pink_elephant.png";
 
             FileStream fis1 = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -53,7 +57,9 @@ namespace PdfjetDemo
 
             image2.DrawOn(page2);
 
-            //Draw the title
+            #endregion
+
+            #region Draw the title
 
             TextColumn column = new TextColumn(0);
 
@@ -74,8 +80,9 @@ namespace PdfjetDemo
             column.AddParagraph(p1);
 
             column.DrawOn(page2);
+            #endregion
 
-            //Draw the Form
+            #region Draw the Form
 
             // Set the Colomn for the labels
 
@@ -91,6 +98,7 @@ namespace PdfjetDemo
 
             Labels_Colomn.SetSpaceBetweenParagraphs(20);
 
+
             //Set The Text for the labels
 
             Paragraph First_Name = new Paragraph();
@@ -101,19 +109,60 @@ namespace PdfjetDemo
 
             Last_Name.Add(new TextLine(Labels_Font, "Last Name:"));
 
-            // Create the textboxes for the labels
+            Paragraph Gender = new Paragraph();
+
+            Gender.Add(new TextLine(Labels_Font, "Gender:"));
+
+            Paragraph Favourite_sport = new Paragraph();
+
+            Favourite_sport.Add(new TextLine(Labels_Font, "sport:"));
 
             TextBox First_Name_Textbox = new TextBox(Labels_Font);
 
             First_Name_Textbox.SetText("Mohammad");
 
-            First_Name_Textbox.SetPosition(80.0f,80.0f);
-           
+            First_Name_Textbox.SetPosition(80.0f, 80.0f);
+
             TextBox Last_Name_Textbox = new TextBox(Labels_Font);
 
             Last_Name_Textbox.SetText("Altahan");
 
             Last_Name_Textbox.SetPosition(80.0f, 110.0f);
+
+
+            //add Radio buttons to the form
+
+            RadioButton Male_Radiobutton = new RadioButton(Labels_Font, "Male");
+
+            Male_Radiobutton.SetPosition(80.0f, 150.0f);
+
+            Male_Radiobutton.Select(true);
+
+            RadioButton Female_Radiobutton = new RadioButton(Labels_Font, "Female");
+
+            Female_Radiobutton.SetPosition(130.0f, 150.0f);
+
+            //add Radio buttons to the form
+
+            CheckBox Football_checkbox = new CheckBox(Labels_Font, "Football");
+
+            Football_checkbox.SetPosition(80.0f, 180.0f);
+
+            Football_checkbox.Check(Mark.CHECK);
+
+            CheckBox swimming_checkbox = new CheckBox(Labels_Font, "Swimming");
+
+            swimming_checkbox.SetPosition(150.0f, 180.0f);
+
+            swimming_checkbox.Check(Mark.CHECK);
+
+            CheckBox joggen_checkbox = new CheckBox(Labels_Font, "joggen");
+
+            joggen_checkbox.SetPosition(220.0f, 180.0f);
+
+            #endregion
+
+            #region  add component to the page
 
             //add the labels to the colomn
 
@@ -121,13 +170,36 @@ namespace PdfjetDemo
 
             Labels_Colomn.AddParagraph(Last_Name);
 
-            //add the the components to the page
+            Labels_Colomn.AddParagraph(Gender);
+
+            Labels_Colomn.AddParagraph(Favourite_sport);
+
+
+            //add the Textboxes to the page
 
             First_Name_Textbox.DrawOn(page2);
 
             Last_Name_Textbox.DrawOn(page2);
 
+
+            //add the column to the page
+
             Labels_Colomn.DrawOn(page2);
+
+            //add the Radio buttons to the page
+
+            Male_Radiobutton.DrawOn(page2);
+
+            Female_Radiobutton.DrawOn(page2);
+
+            //add the Checkboxes to the page
+
+            Football_checkbox.DrawOn(page2);
+
+            swimming_checkbox.DrawOn(page2);
+
+            joggen_checkbox.DrawOn(page2);
+            #endregion
 
             //Write to the pdf file
             pdf.Flush();
