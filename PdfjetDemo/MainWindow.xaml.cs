@@ -45,7 +45,7 @@ namespace PdfjetDemo
 
             #region Draw the Logo
 
-            String fileName = @"C:\Users\Fatima\Documents\PdfExport\PdfjetDemo\images\pink_elephant.png";
+            String fileName = @"pink_elephant.png";
 
             FileStream fis1 = new FileStream(fileName, FileMode.Open, FileAccess.Read);
 
@@ -164,7 +164,7 @@ namespace PdfjetDemo
 
             #region add images to the file
 
-            String montana = @"C:\Users\Fatima\Documents\images\montana_1990.jpg";
+            String montana = @"montana_1990.jpg";
 
             Image image1 = new Image(pdf, new FileStream(montana, FileMode.Open), ImageType.JPG);
 
@@ -176,7 +176,7 @@ namespace PdfjetDemo
 
             image1.DrawOn(page2);
 
-            String europelargesm = @"C:\Users\Fatima\Documents\images\europelargesm.jpg";
+            String europelargesm = @"europelargesm.jpg";
 
             Image europ_image = new Image(pdf, new FileStream(europelargesm, FileMode.Open), ImageType.JPG);
 
@@ -188,7 +188,7 @@ namespace PdfjetDemo
 
             europ_image.DrawOn(page2);
 
-            String fruits = @"C:\Users\Fatima\Documents\images\Culinary_fruits_front_view.jpg";
+            String fruits = @"Culinary_fruits_front_view.jpg";
 
             Image fruits_image = new Image(pdf, new FileStream(fruits, FileMode.Open), ImageType.JPG);
 
